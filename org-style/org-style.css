@@ -288,6 +288,12 @@ aside > p
     overflow: auto;
 }
 
+/* text after TOC that's not under a header */
+body p
+{
+    clear: both;
+}
+
 /* #main { */
 div.outline-2
 {
@@ -328,12 +334,12 @@ pre
 /* inline ~-delimited stuff is exported as code, and it's within a p */
 p > code:before
 {
-    content: "「";
+    content: "「"; /* left corner bracket */
 }
 
 p > code:after
 {
-    content: "」";
+    content: "」"; /* right corner bracket */
 }
 
 /* @end */
