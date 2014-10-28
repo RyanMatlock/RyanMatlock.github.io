@@ -121,8 +121,9 @@ table
 {
     border-collapse: collapse;
     margin-bottom: 1.5em;
-    table-layout: fixed;
-    width: 100%;
+    /* I don't think I like how these look */
+    /* table-layout: fixed; */
+    /* width: 100%; */
 }
 
 /* Style ordered lists like LaTeX:
