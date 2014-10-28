@@ -174,17 +174,35 @@ td.center { text-align: center; }
 td, th
 {
     word-wrap: break-word;
-}    
+    padding: 0.5em;
+}
+
+td
+{
+    border: 1px solid #ccc;
+}
+
+th
+{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+thead
+{
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
 
 table
 {
-    border: 2px #aaa;
-    padding: 6px;
-    border-spacing: 0px;
+    /* border: 2px #aaa; */
+    /* padding: 6px; */
+    /* border-spacing: 0px; */
     border-collapse: collapse;
     margin-bottom: 1.5em;
-    border-top-width: 2px #000;
-    border-bottom-width: 2px #000;
+    /* border-top-width: 2px #000; */
+    /* border-bottom-width: 2px #000; */
     /* I don't think I like how these look */
     /* table-layout: fixed; */
     /* width: 100%; */
@@ -414,12 +432,6 @@ h1.title
 
 /* @end */
 
-td
-{
-    border: 1px solid #ccc;
-}
-
-
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span
 {
     background-color: #eee;
@@ -518,5 +530,16 @@ Styling for the printed page
         /* width: 100%; */
         overflow: visible;
         height: auto;
+    }
+    
+    /* this doesn't work as well as I'd like */
+    tr, td, th, thead
+    {
+        page-break-inside: avoid !important;
+    }
+
+    h1, h2, h3, h4, h5, h6, thead
+    {
+        page-break-after: avoid !important;
     }
 }
