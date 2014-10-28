@@ -94,21 +94,6 @@ p, ul, blockquote, pre, td, th, label
     margin-bottom: 1.5em;
 }
 
-td
-{
-    word-wrap: break-word;
-    padding: 0.2em;
-}
-
-th
-{
-    word-wrap: break-word;
-    align: left;
-    padding: 0.2em;
-    border: 1px;
-}
-    
-
 p.small, #postamble
 {
     margin: 0;
@@ -117,10 +102,89 @@ p.small, #postamble
     margin-bottom: 1.8em;
 }
 
+/* table stuff
+
+Here's the output of an Org mode 7.9 table:
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="right" /></colgroup><colgroup><col class="left" /></colgroup><colgroup><col class="left" /></colgroup>
+<thead>
+...
+</tbody>
+</table>
+
+and the header CSS:
+
+table { border-collapse: collapse; }
+td, th { vertical-align: top;  }
+th.right  { text-align:center;  }
+th.left   { text-align:center;   }
+th.center { text-align:center; }
+td.right  { text-align:right;  }
+td.left   { text-align:left;   }
+td.center { text-align:center; }
+
+Now an 8.2 table:
+
+<table>
+
+
+<colgroup>
+<col  class="right">
+
+<col  class="left">
+
+<col  class="left">
+
+<col  class="left">
+
+<col  class="left">
+
+<col  class="left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">bin #</th>
+<th scope="col" class="left">type</th>
+<th scope="col" class="left">value</th>
+<th scope="col" class="left">description</th>
+<th scope="col" class="left">mfg</th>
+<th scope="col" class="left">part #</th>
+</tr>
+</thead>
+...
+</tbody>
+</table>
+
+and the CSS:
+
+table { border-collapse:collapse; }
+caption.t-above { caption-side: top; }
+caption.t-bottom { caption-side: bottom; }
+td, th { vertical-align:top;  }
+th.right  { text-align: center;  }
+th.left   { text-align: center;   }
+th.center { text-align: center; }
+td.right  { text-align: right;  }
+td.left   { text-align: left;   }
+td.center { text-align: center; }
+
+*/
+
+td, th
+{
+    word-wrap: break-word;
+}    
+
 table
 {
+    border: 2px #aaa;
+    padding: 6px;
+    border-spacing: 0px;
     border-collapse: collapse;
     margin-bottom: 1.5em;
+    border-top-width: 2px #000;
+    border-bottom-width: 2px #000;
     /* I don't think I like how these look */
     /* table-layout: fixed; */
     /* width: 100%; */
