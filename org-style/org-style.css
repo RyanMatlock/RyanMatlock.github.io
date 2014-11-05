@@ -102,6 +102,24 @@ p.small, #postamble
     margin-bottom: 1.8em;
 }
 
+figure > p
+{
+    padding-bottom: 0ex;
+    margin-bottom: 0ex;
+}
+
+figcaption
+{
+    margin-top: 0ex;
+    padding-top: 0ex;
+    font-size: smaller;
+}
+
+.figure-number
+{
+    font-weight: bold;
+}
+
 /* table stuff
 
 Here's the output of an Org mode 7.9 table:
