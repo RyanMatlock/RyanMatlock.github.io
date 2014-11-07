@@ -189,6 +189,11 @@ td.center { text-align: center; }
 
 */
 
+.table-number
+{
+    font-weight: bold;
+}
+
 td, th
 {
     word-wrap: break-word;
