@@ -337,9 +337,15 @@ aside p
 {
     clear: both;
     margin-top: 2ex;
-    width: 40em;
+    margin-left: 5%;
+    /* width: 40em; */
+    width: auto;
     float: left;
     overflow: auto;
+    /* border: 1px solid #ccc; */
+    padding: 2ex;
+    padding-bottom: 0ex;
+    margin-bottom: 2ex;
 }
 
 /* text after TOC that's not under a header */
@@ -574,6 +580,12 @@ Styling for the printed page
         /* actually, I think displaying the TOC is helpful even if it does eat
            up some space on the page */
         /* display: none */
+        border: none;
+    }
+
+    #table-of-contents > h2
+    {
+        display: none;
     }
 
     h1
