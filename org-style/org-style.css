@@ -571,7 +571,9 @@ Styling for the printed page
 
     #table-of-contents   
     {
-        display: none
+        /* actually, I think displaying the TOC is helpful even if it does eat
+           up some space on the page */
+        /* display: none */
     }
 
     h1
