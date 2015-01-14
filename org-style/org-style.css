@@ -580,12 +580,21 @@ Styling for the printed page
         /* actually, I think displaying the TOC is helpful even if it does eat
            up some space on the page */
         /* display: none */
-        border: none;
+        /* border: none; */
+        /* Ok, I used to think it was useful displaying the TOC when printing,
+           but it's leading to weird issues, so I guess I can't do it yet. */
+        display: none;
     }
 
     #table-of-contents > h2
     {
+        /* hide text "Table of Contents" */
         display: none;
+    }
+
+    nav::after
+    {
+        clear: both;
     }
 
     h1
