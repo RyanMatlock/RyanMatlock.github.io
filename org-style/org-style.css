@@ -553,14 +553,27 @@ blockquote
     border: 1px solid #ccc;
 }
 
+/* this setup (including the :first-child and :last-child stuff) gives me nice 
+   spacing between paragraphs, which is helpful when quoting long blocks of 
+   text */
 blockquote p
 {
-    margin: 0px;
+    margin: 1ex;
     margin-left: 2px;
     margin-right: 2px;
     padding: 0px;
+    display: block;
 }
 
+blockquote p:first-child
+{
+    margin-top: 0px;
+}
+
+blockquote p:last-child
+{
+    margin-bottom: 0px;
+}
 
 /*
 Styling for the printed page
